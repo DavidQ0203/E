@@ -1,0 +1,57 @@
+.info{
+    background-color: #fdfaf6;
+    padding: 60px 20px;
+}
+
+
+.info h2{
+    text-align: center;
+    color: #3e2f2f;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.contenido{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.contenido img{
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.barismo{
+    max-width: 500px;
+    color: #3e2f2f;
+    font-size: 1.1em;
+}
+
+.barismo ul{
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.barismo li{
+    margin-bottom: 10px;
+}
+
+.barismo button{
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #a9744f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.barismo button:hover {
+    background-color: #8c5c3f;
+}

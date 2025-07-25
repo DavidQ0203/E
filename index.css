@@ -1,0 +1,329 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}
+p{font-size: 1.25em;}
+ul{list-style: none;}
+li{ font-size: 1.25em;}
+
+body{
+    font-family: 'roboto', sans-serif;
+    margin:0;
+}
+
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0, 0.5);
+    box-shadow: 2px 2px 10px rgba(0,0,0, 0.5);
+    color:white;
+    background-color: rgb(102, 21, 21);
+}
+button:hover{
+    background-color: rgb(36, 6, 6);
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.color-acento{color: rgb(102, 21, 21); }
+
+header{
+    background-color: rgb(222, 221, 221) ;
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: rgb(102, 21, 21);
+    font-size: 1.7em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(2, 2, 2);
+}
+
+header a:hover{
+    color: rgb(36, 6, 6);
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("MEDIA/imagendefondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero h1{
+    color: white;
+}
+
+#QuienesSo .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#NuestrosServ{
+    background-color: rgb(30, 30, 30);
+    color: white;
+    text-align: center;
+}
+
+#NuestrosServ .container{
+    padding: 200px 0px;
+}
+
+#NuestrosServ h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#NuestrosServ p{
+    display: none;
+}
+
+#NuestrosServ .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 30px;
+    margin: 25px;
+    border-radius: 15px;
+}
+
+.carta:first-child{
+        background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("MEDIA/carta1.jpg");
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("MEDIA/carta2.jpg");
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("MEDIA/carta3.jpg");
+}
+
+#Te-Brindamos .container{
+    text-align: center center;
+    padding: 200px 12px;
+}
+
+
+#Te-Brindamos li{
+    margin: 16px 0px;
+    font-weight: bold;
+}
+
+#final{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color: white;
+    height: 80vh;
+        background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("MEDIA/imagenfinal.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+footer{
+    background-color: rgb(230,230,230);
+}
+footer p{
+    margin: 0;
+    color: rgb(100,100,100);
+    padding: 12px;
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@media (min-width: 600px) {
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #QuienesSo .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #QuienesSo .texto{
+        width: 50%;
+        text-align: initial;
+        padding-left: 50px;
+        max-width: 600px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #QuienesSo h2{
+        margin-top: 0px;
+    }
+
+    #QuienesSo .img-container{
+        background-image: url("MEDIA/quienessomos.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 600px;
+        width: 500px;
+    }
+
+    #NuestrosServ .servicios{
+        display: flex;
+        justify-content: center;
+    }
+
+    #NuestrosServ p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #NuestrosServ h2{
+        font-size: 4em;
+    }
+
+     #NuestrosServ h3{
+        margin-top: 0;
+     }
+
+     #NuestrosServ .carta{
+        padding: 50px;
+        background-position: 0;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+     }
+
+     #Te-Brindamos{
+        background-image: url("MEDIA/Tebrindamos.jpg");
+        background-repeat: no-repeat;
+        background-size: 350px 550px;
+        background-position: 95px 95px;
+
+     }
+
+     #Te-Brindamos .container{
+        text-align: initial;
+        }
+
+     #Te-Brindamos h2{
+        margin-left: 700px;
+     }
+
+     #Te-Brindamos ul{
+        margin-left: 450px;
+     } 
+}
+
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 999;
+  font-size: 1em;
+}
+
+.cart-panel.open {
+  right: 0;
+}
+
+.cart-panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-panel li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
+.cart-panel button {
+  margin-top: 10px;
+  width: 100%;
+  font-size: 1em;
+}

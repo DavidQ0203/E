@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.35), 
+    rgba(0, 0, 0, 0.35)
+  ), url('MEDIA/paisaje.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  color: #3e2f2f;
+}
+
+header {
+  background-color: rgba(222, 221, 221, 0.9);
+}
+
+header .container {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+header .logo {
+  font-weight: bold;
+  font-size: 1.8em;
+  color: rgb(102, 21, 21);
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: rgb(36, 6, 6);
+}
+
+#productos {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+#productos h2 {
+  font-size: 3em;
+  margin-bottom: 50px;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.productos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.producto {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 300px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+  backdrop-filter: blur(3px); /* efecto elegante sobre fondo */
+}
+
+.producto:hover {
+  transform: scale(1.05);
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.producto h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #3e2f2f;
+}
+
+.producto p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: #3e2f2f;
+}
+
+button {
+  font-size: 1em;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(102, 21, 21);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(36, 6, 6);
+}
+
+footer {
+  background-color: rgba(230, 230, 230, 0.9);
+  margin-top: 60px;
+}
+
+footer .container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  color: rgb(100, 100, 100);
+}
+
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 999;
+  font-size: 1em;
+}
+
+.cart-panel.open {
+  right: 0;
+}
+
+.cart-panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-panel li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
+.cart-panel button {
+  margin-top: 10px;
+  width: 100%;
+  font-size: 1em;
+}
