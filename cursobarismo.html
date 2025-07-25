@@ -1,32 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso de Barismo</title>
-    <link rel="stylesheet" href="cursobarismo.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curso de Barismo</title>
+  <link rel="stylesheet" href="cursobarismo.css">
 </head>
 <body>
-    <section id="curso-barismo" class="info">
-  <div class="container">
-    <h2>Curso de Barismo Profesional</h2>
-    <div class="contenido">
-      <img src="MEDIA/Barista.jpg" alt="Curso de barismo">
-      <div class="barismo">
-        <p>
-          Nuestro <strong>curso de barismo</strong> está diseñado para quienes desean dominar el arte del café.
-          Aprende desde cero sobre tipos de granos, molienda, extracción, arte latte, y técnicas avanzadas de preparación.
-        </p>
-        <ul>
-          <li>☕ Entrenamiento práctico con máquinas profesionales</li>
-          <li>📚 Clases teóricas con baristas certificados</li>
-          <li>🎓 Certificación avalada por expertos</li>
-          <li>📍 Modalidad presencial o virtual</li>
-        </ul>
-        <button>Inscribirme Ahora</button>
+
+  <!-- Sección del curso -->
+  <section id="curso-barismo" class="info">
+    <div class="container">
+      <h2>Curso de Barismo Profesional</h2>
+      <div class="contenido">
+        <img src="Barista.jpg" alt="Curso de barismo">
+        <div class="barismo">
+          <p>
+            Nuestro <strong>curso de barismo</strong> está diseñado para quienes desean dominar el arte del café.
+            Aprende desde cero sobre tipos de granos, molienda, extracción, arte latte, y técnicas avanzadas de preparación.
+          </p>
+          <ul>
+            <li>☕ Entrenamiento práctico con máquinas profesionales</li>
+            <li>📚 Clases teóricas con baristas certificados</li>
+            <li>🎓 Certificación avalada por expertos</li>
+            <li>📍 Modalidad presencial o virtual</li>
+          </ul>
+          <button id="boton-inscripcion">Inscribirme ahora</button>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- Sección del formulario -->
+  <section id="formulario-barismo" class="container">
+    <h2>Inscríbete al Curso</h2>
+    <form id="barismoForm">
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" required>
+
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" required>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" required>
+
+      <button type="submit">Inscribirme</button>
+    </form>
+    <p id="mensaje"></p>
+  </section>
+
+  <!-- Script -->
+  <script>
+    // Scroll al formulario
+    document.getElementById("boton-inscripcion").addEventListener("click", function() {
+      document.getElementById("formulario-barismo").scrollIntoView({ behavior: "smooth" });
+    });
+
+    // Guardar en Local Storage
+    document.getElementById('barismoForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const nombre = document.getElementById('nombre').value;
+      const correo = document.getElementById('correo').value;
+      const telefono = document.getElementById('telefono').value;
+
+      const nuevoInscrito = {
+        nombre,
+        correo,
+        telefono
+      };
+
+      let inscritos = JSON.parse(localStorage.getItem('inscritosBarismo')) || [];
+      inscritos.push(nuevoInscrito);
+      localStorage.setItem('inscritosBarismo', JSON.stringify(inscritos));
+
+      document.getElementById('mensaje').textContent = "¡Gracias por inscribirte!";
+      document.getElementById('barismoForm').reset();
+    });
+  </script>
 </body>
 </html>
