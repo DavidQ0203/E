@@ -55,3 +55,79 @@
 .barismo button:hover {
     background-color: #8c5c3f;
 }
+#formulario-barismo {
+  background-color: #fdf9f3;
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#formulario-barismo h2 {
+  text-align: center;
+  color: #4b2e2e;
+  margin-bottom: 20px;
+}
+
+#barismoForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#barismoForm label {
+  font-weight: bold;
+  color: #4b2e2e;
+}
+
+#barismoForm input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+#barismoForm button {
+  background-color: #8B4513;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#barismoForm button:hover {
+  background-color: #5c2e0f;
+}
+
+#mensaje {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: green;
+}
+
+#lista-inscritos {
+  margin-top: 30px;
+}
+
+#lista-inscritos h3 {
+  color: #4b2e2e;
+  margin-bottom: 10px;
+}
+
+#lista-inscritos ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#lista-inscritos li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 5px;
+  color: #333;
+}
