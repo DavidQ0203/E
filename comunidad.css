@@ -120,4 +120,33 @@ footer .container {
 
 footer p {
   color: rgb(100, 100, 100);
+
+}
+.estadisticas {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.estadisticas h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #5a3e2b; /* tono café */
+}
+
+.grafico {
+    margin-bottom: 30px;
+}
+
+.grafico img {
+    max-width: 80%;
+    height: auto;
+    border: 2px solid #d2b48c; /* borde color café claro */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.grafico p {
+    font-size: 1em;
+    color: #333;
+    margin-top: 10px;
 }
