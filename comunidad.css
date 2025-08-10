@@ -122,8 +122,9 @@ footer p {
 }
 
 #analisis {
-  background-color: rgb(197, 197, 197);
+  background-color: rgb(202, 202, 202);
   text-align: center;
-  image-orientation: center;
+  image-orientation: auto;
 }
+
 
